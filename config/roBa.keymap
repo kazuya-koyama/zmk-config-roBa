@@ -78,24 +78,16 @@
     keymap {
         compatible = "zmk,keymap";
 
-default_layer {
-    bindings = <
-/* ─────────────── Row 1 ─────────────── */
-&kp SQT      &kp COMMA    &kp PERIOD   &kp P        &kp Y                               &kp F        &kp G        &kp C        &kp R        &kp L
+        default_layer {
+            bindings = <
+&kp SQT        &kp COMMA     &kp PERIOD  &kp P             &kp Y                                             &kp F      &kp G  &kp C  &kp R  &kp L
+&kp A          &kp O         &kp E       &kp U             &kp I        &to 5                 &kp D          &kp H      &kp T  &kp N  &kp S  &kp ESCAPE
+&kp SEMICOLON  &kp Q         &kp J       &kp K             &kp X        &trans                &kp B          &kp M      &kp W  &kp V  &kp Z  &trans
+&kp LCTRL      &kp LEFT_GUI  &kp LANG4   &lt 2 LEFT_SHIFT  &lt 1 SPACE  &kp INT_MUHENKAN      &kp BACKSPACE  &kp ENTER                       &to 6
+            >;
 
-/* ─────────────── Row 2 (Home) ─────── */
-&kp A        &kp O        &kp E        &kp U        &kp I        &trans                 &kp D        &kp H        &kp T        &kp N        &kp S        &kp ESCAPE
-
-/* ─────────────── Row 3 ─────────────── */
-&kp SEMICOLON &kp Q       &kp J        &kp K        &kp X        &trans                 &kp B        &kp M        &kp W        &kp V        &kp Z        &trans
-
-/* ─────────────── Thumbs ────────────── */
-&kp LCTRL    &kp LEFT_GUI  &kp LANG4   &kp LEFT_SHIFT   &kp SPACE   &kp INT_MUHENKAN      &kp BACKSPACE  &kp ENTER                        &trans
-    >;
-
-    sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
-};
-
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+        };
 
         NUM {
             bindings = <
@@ -135,21 +127,21 @@ default_layer {
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
+        bt {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans  &to 0       &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
         SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &to 0
             >;
         };
     };
