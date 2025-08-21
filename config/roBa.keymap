@@ -50,6 +50,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <34 35>;
+        };
     };
 
     macros {
@@ -78,9 +83,9 @@
         default_layer {
             bindings = <
 &kp SQT        &kp COMMA     &kp PERIOD      &kp P        &kp Y                                   &kp F      &kp G  &kp C  &kp R  &kp L
-&kp A          &kp O         &kp E           &kp U        &kp I     &to 5          &kp D          &kp H      &kp T  &kp N  &kp S  &kp ESCAPE
-&kp SEMICOLON  &kp Q         &kp J           &kp K        &kp X     &kp MINUS      &kp B          &kp M      &kp W  &kp V  &kp Z  &kp LS(CLCK)
-&kp LCTRL      &kp LEFT_GUI  &kp LEFT_SHIFT  &lt 1 SPACE  &mkp MB1  &mkp MB2       &kp BACKSPACE  &kp ENTER                       &lt 2 LEFT_SHIFT
+&kp SEMICOLON  &kp Q         &kp J           &kp K        &kp X     &to 5          &kp D          &kp H      &kp T  &kp N  &kp S  &kp ESCAPE
+&kp A          &kp O         &kp E           &kp U        &kp I     &kp MINUS      &kp B          &kp M      &kp W  &kp V  &kp Z  &kp LS(CLCK)
+&kp LCTRL      &kp LEFT_GUI  &kp LEFT_SHIFT  &lt 1 SPACE  &mkp MB1  &mkp MB2       &kp BACKSPACE  &kp ENTER                       &lt 2 LEFT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -97,10 +102,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                            &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans        &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &bt BT_SEL 0  &trans                          &kp F12
+&trans  &trans  &trans  &trans  &trans                                  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans     &trans         &kp F13       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans     &trans         &trans        &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans  &trans  &trans  &kp LC(V)  &kp LC(C)      &bt BT_SEL 0  &trans                          &kp F12
             >;
         };
 
