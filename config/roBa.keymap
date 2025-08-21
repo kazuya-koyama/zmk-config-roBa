@@ -78,17 +78,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+default_layer {
     bindings = <
-&kp ESCAPE   &kp EXCLAMATION &kp AT_SIGN  &kp HASH   &kp DOLLAR                 &kp PERCENT  &kp CARET    &kp AMPERSAND &kp ASTERISK &kp LEFT_PAREN
-&kp QUOTE    &kp COMMA       &kp PERIOD   &kp P      &kp Y        &kp SEMICOLON &kp F        &kp G        &kp C         &kp R       &kp L        &kp SLASH
-&kp A        &kp O           &kp E        &kp U      &kp I        &kp MINUS     &kp D        &kp H        &kp T         &kp N       &kp S        &kp EQUAL
-&kp Z        &kp Q           &kp J        &kp K      &kp X        &kp BACKSLASH &kp B        &kp M        &kp W         &kp V       &kp Z        &kp GRAVE
-&kp LCTRL    &kp LEFT_GUI    &kp LANG2    &lt 2 LEFT_SHIFT &lt 1 SPACE  &lt_to_layer_0 4 INT_MUHENKAN   &kp BACKSPACE  &lt 2 ENTER                  &to 6
+/* ─────────────── Row 1 ─────────────── */
+&kp QUOTE    &kp COMMA    &kp PERIOD   &kp P        &kp Y                               &kp F        &kp G        &kp C        &kp R        &kp L
+
+/* ─────────────── Row 2 (Home) ─────── */
+&kp A        &kp O        &kp E        &kp U        &kp I        &trans                 &kp D        &kp H        &kp T        &kp N        &kp S        &kp ESCAPE
+
+/* ─────────────── Row 3 ─────────────── */
+&kp SEMICOLON &kp Q       &kp J        &kp K        &kp X        &trans                 &kp B        &kp M        &kp W        &kp V        &kp Z        &trans
+
+/* ─────────────── Thumbs ────────────── */
+&kp LCTRL    &kp LEFT_GUI  &kp LANG4   &kp LEFT_SHIFT   &kp SPACE   &kp INT_MUHENKAN      &kp BACKSPACE  &kp ENTER                        &trans
     >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
-        };
+    sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+};
 
         NUM {
             bindings = <
