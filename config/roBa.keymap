@@ -88,7 +88,7 @@
 &kp LCTRL      &kp LEFT_GUI  &kp LEFT_SHIFT  &lt 1 SPACE  &mkp MB1  &mkp MB2       &kp BACKSPACE  &kp ENTER                       &lt 2 LEFT_ALT
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         NUM {
