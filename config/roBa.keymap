@@ -82,10 +82,10 @@
 
         default_layer {
             bindings = <
-&kp SQT         &kp COMMA      &kp PERIOD    &kp P        &kp Y                                  &kp F      &kp G  &kp C  &kp R  &lt 5 L
-&kp TAB         &kp A          &kp O         &kp E        &kp U     &kp I         &kp D          &kp H      &kp T  &kp N  &kp S  &lt 3 MINUS
-&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q         &kp J        &kp K     &kp X         &kp B          &kp M      &kp W  &kp V  &kp Z  &kp LS(CLCK)
-&kp LCTRL       &kp LEFT_GUI   &kp LEFT_ALT  &lt 1 SPACE  &mkp MB1  &mkp MB2      &kp BACKSPACE  &kp ENTER                       &lt 2 LEFT_ALT
+&kp SQT         &kp COMMA      &kp PERIOD    &kp P        &kp Y                                  &kp F      &kp G  &kp C  &kp R    &lt 5 L
+&kp TAB         &kp A          &kp O         &kp E        &kp U     &kp I         &kp D          &kp H      &kp T  &kp N  &lt 3 S  &kp MINUS
+&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q         &kp J        &kp K     &kp X         &kp B          &kp M      &kp W  &kp V  &kp Z    &kp LS(CLCK)
+&kp LCTRL       &kp LEFT_GUI   &kp LEFT_ALT  &lt 1 SPACE  &mkp MB1  &mkp MB2      &kp BACKSPACE  &kp ENTER                         &lt 2 LEFT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
@@ -111,10 +111,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                 &trans    &trans    &msc SCRL_UP    &trans    &trans
-&trans  &trans  &trans  &trans  &trans              &trans                   &trans    &trans    &mkp MB1  &msc SCRL_DOWN  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans              &trans                   &trans    &trans    &trans    &msc SCRL_DOWN  &trans    &trans
-&trans  &trans  &trans  &trans  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)      &mkp MB5  &mkp MB4                                      &trans
+&trans  &trans  &trans  &trans  &trans                                                 &trans    &trans    &msc SCRL_UP    &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans                   &trans    &trans    &mkp MB1  &msc SCRL_DOWN  &trans  &mkp MB2
+&trans  &trans  &trans  &trans  &trans              &trans                   &trans    &trans    &trans    &msc SCRL_DOWN  &trans  &trans
+&trans  &trans  &trans  &trans  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)      &mkp MB5  &mkp MB4                                    &trans
             >;
         };
 
