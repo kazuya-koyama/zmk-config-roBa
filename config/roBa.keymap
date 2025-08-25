@@ -82,10 +82,10 @@
 
         default_layer {
             bindings = <
-&kp SQT         &kp COMMA      &kp PERIOD    &kp P        &kp Y                                  &kp F      &kp G  &kp C    &kp R  &lt 5 L
-&kp TAB         &kp A          &kp O         &kp E        &kp U     &kp I         &kp D          &kp H      &kp T  &lt 3 N  &kp S  &kp MINUS
-&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q         &kp J        &kp K     &kp X         &kp B          &kp M      &kp W  &kp V    &kp Z  &kp LS(CLCK)
-&kp LCTRL       &kp LEFT_GUI   &kp LEFT_ALT  &lt 1 SPACE  &mkp MB1  &mkp MB2      &kp BACKSPACE  &kp ENTER                         &lt 2 LEFT_ALT
+&kp SQT         &kp COMMA      &kp PERIOD    &kp P      &kp Y                                     &kp F      &kp G  &kp C    &kp R  &lt 5 L
+&kp TAB         &kp A          &kp O         &kp E      &kp U        &kp I         &kp D          &kp H      &kp T  &lt 3 N  &kp S  &kp MINUS
+&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q         &kp J      &kp K        &kp X         &kp B          &kp M      &kp W  &kp V    &kp Z  &kp LS(CLCK)
+&kp LCTRL       &kp LEFT_GUI   &kp LEFT_ALT  &kp SPACE  &lt 1 SPACE  &mkp MB1      &kp BACKSPACE  &kp ENTER                         &lt 2 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
@@ -93,8 +93,8 @@
 
         NUM {
             bindings = <
-&kp ESCAPE      &kp EXCLAMATION  &kp AT_SIGN     &kp HASH         &kp DOLLAR                                              &kp N7        &kp N8        &kp N9        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LALT        &kp HOME         &kp UP_ARROW    &kp END          &kp GRAVE             &kp PLUS       &kp SQT            &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp COLON       &kp EXCLAMATION  &kp AT_SIGN     &kp HASH         &kp DOLLAR                                              &kp N7        &kp N8        &kp N9        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp SEMICOLON   &kp HOME         &kp UP_ARROW    &kp END          &kp GRAVE             &kp PLUS       &kp SQT            &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp NON_US_BACKSLASH  &kp EQUAL      &kp DOUBLE_QUOTES  &kp N1        &kp NUMBER_2  &kp N3        &kp LEFT_BRACE        &kp RIGHT_BRACE
 &kp LCTRL       &trans           &trans          &trans           &trans                &trans         &kp PERIOD         &kp SLASH                                                       &kp N0
             >;
