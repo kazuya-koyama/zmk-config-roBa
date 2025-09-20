@@ -96,7 +96,7 @@
 &kp COLON       &kp EXCLAMATION  &kp AT_SIGN     &kp HASH         &kp DOLLAR                                              &kp N7        &kp N8        &kp N9        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp SEMICOLON   &kp HOME         &kp UP_ARROW    &kp END          &kp GRAVE             &kp PLUS       &kp SQT            &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp NON_US_BACKSLASH  &kp EQUAL      &kp DOUBLE_QUOTES  &kp N1        &kp NUMBER_2  &kp N3        &kp LEFT_BRACE        &kp RIGHT_BRACE
-&kp LCTRL       &trans           &trans          &trans           &trans                &trans         &kp PERIOD         &kp SLASH                                                       &kp N0
+&kp LCTRL       &trans           &trans          &trans           &trans                &to 6          &kp PERIOD         &kp SLASH                                                       &kp N0
             >;
         };
 
@@ -138,12 +138,12 @@
             >;
         };
 
-        SCROLL {
+        SC {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &to 0
+&trans         &kp LG(Q)  &kp LG(W)  &kp LG(LS(R))  &kp LS(LG(C))                         &trans  &trans  &trans  &trans  &trans
+&kp LC(SPACE)  &kp LG(A)  &trans     &trans         &kp LG(F)      &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans     &trans     &trans         &kp LG(T)      &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans     &trans     &trans         &kp LG(C)      &kp LG(V)      &trans  &trans                          &to 0
             >;
         };
     };
