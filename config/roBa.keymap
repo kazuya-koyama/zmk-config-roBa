@@ -61,7 +61,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 7 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
     };
@@ -80,15 +80,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty {
             bindings = <
-&kp SQT         &kp COMMA      &kp PERIOD    &kp P      &kp Y                                     &kp F      &kp G  &kp C    &kp R  &lt 5 L
-&kp TAB         &kp A          &kp O         &kp E      &kp U        &kp I         &kp D          &kp H      &kp T  &lt 3 N  &kp S  &kp MINUS
-&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q         &kp J      &kp K        &kp X         &kp B          &kp M      &kp W  &kp V    &kp Z  &kp LS(CLCK)
-&kp LCTRL       &kp LEFT_GUI   &kp LEFT_ALT  &kp SPACE  &lt 1 SPACE  &mkp MB1      &kp BACKSPACE  &kp ENTER                         &lt 2 ESCAPE
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         NUM {
@@ -132,7 +130,7 @@
         bt {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &to 0       &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &trans        &trans        &trans        &trans  &to 7       &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
@@ -142,9 +140,20 @@
             bindings = <
 &trans         &kp LG(Q)  &kp LG(W)  &kp LG(LS(R))  &kp LS(LG(C))                         &trans  &trans  &trans  &trans  &trans
 &kp LC(SPACE)  &kp LG(A)  &trans     &trans         &kp LG(F)      &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans     &trans     &trans         &kp LG(T)      &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans     &trans     &trans         &kp LG(C)      &kp LG(V)      &trans  &trans                          &to 0
+&trans         &trans     &trans     &trans         &kp LG(LS(T))  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans     &trans     &trans         &kp LG(C)      &kp LG(V)      &trans  &trans                          &to 7
             >;
+        };
+
+        dovrak {
+            bindings = <
+&kp SQT         &kp COMMA      &kp PERIOD    &kp P      &kp Y                                     &kp F      &kp G  &kp C    &kp R  &lt 5 L
+&kp TAB         &kp A          &kp O         &kp E      &kp U        &kp I         &kp D          &kp H      &kp T  &lt 3 N  &kp S  &kp MINUS
+&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q         &kp J      &kp K        &kp X         &kp B          &kp M      &kp W  &kp V    &kp Z  &kp LS(CLCK)
+&kp LCTRL       &kp LEFT_GUI   &kp LEFT_ALT  &kp SPACE  &lt 1 SPACE  &mkp MB1      &kp BACKSPACE  &kp ENTER                         &lt 2 ESCAPE
+            >;
+
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
     };
 };
