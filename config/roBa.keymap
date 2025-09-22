@@ -143,7 +143,7 @@
 &trans         &kp LG(Q)  &kp LG(W)  &kp LG(LS(R))  &kp LS(LG(C))                         &trans  &trans  &trans  &trans  &trans
 &kp LC(SPACE)  &kp LG(A)  &trans     &trans         &kp LG(F)      &trans         &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &trans     &trans     &trans         &kp LG(LS(T))  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans     &trans     &trans         &kp LG(C)      &kp LG(V)      &trans  &trans                          &to 7
+&trans         &trans     &trans     &trans         &kp LG(C)      &kp LG(V)      &trans  &trans                          &to 0
             >;
         };
 
