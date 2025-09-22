@@ -1,0 +1,159 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+
+&mt {
+    flavor = "balanced";
+    quick-tap-ms = <0>;
+};
+
+&trackball {
+    // arrows {
+    //     layers = <3>;
+    //     bindings =
+    //         <&kp RIGHT_ARROW>,
+    //         <&kp LEFT_ARROW>,
+    //         <&kp UP_ARROW>,
+    //         <&kp DOWN_ARROW>;
+    //     tick = <10>;
+    //     wait-ms = <5>;
+    //     tap-ms = <5>;
+    // };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
+        };
+
+        shift_tab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <12 13>;
+        };
+
+        muhennkann {
+            bindings = <&to_layer_0 INT_MUHENKAN>;
+            key-positions = <11 10>;
+        };
+
+        double_quotation {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <20 21>;
+        };
+
+        eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <24 25>;
+        };
+
+        alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <34 35>;
+        };
+    };
+
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 7 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+    };
+
+    behaviors {
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        qwerty {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        NUM {
+            bindings = <
+&kp COLON       &kp EXCLAMATION  &kp AT_SIGN     &kp HASH         &kp DOLLAR                                              &kp N7        &kp N8        &kp N9        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp SEMICOLON   &kp HOME         &kp UP_ARROW    &kp END          &kp GRAVE             &kp PLUS       &kp SQT            &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp NON_US_BACKSLASH  &kp EQUAL      &kp DOUBLE_QUOTES  &kp N1        &kp NUMBER_2  &kp N3        &kp LEFT_BRACE        &kp RIGHT_BRACE
+&kp LCTRL       &trans           &trans          &trans           &trans                &to 6          &kp PERIOD         &kp SLASH                                                       &kp N0
+            >;
+        };
+
+        FUNCTION {
+            bindings = <
+&kp LG(LS(C))  &trans  &trans  &trans  &trans                                  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&kp LG(LS(R))  &trans  &trans  &trans  &trans     &trans         &kp F13       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans         &trans  &trans  &trans  &trans     &trans         &trans        &trans  &trans  &trans  &trans  &kp F11
+&trans         &trans  &trans  &trans  &kp LG(V)  &kp LG(C)      &bt BT_SEL 0  &trans                          &kp F12
+            >;
+        };
+
+        MOUSE {
+            bindings = <
+&trans  &trans     &trans  &trans  &trans                                                 &trans    &msc SCRL_UP    &trans  &trans    &trans
+&trans  &kp LG(V)  &trans  &trans  &kp LG(C)           &trans                   &trans    &mkp MB1  &msc SCRL_DOWN  &trans  &mkp MB2  &trans
+&trans  &kp LC(V)  &trans  &trans  &kp LC(C)           &kp LC(UP_ARROW)         &trans    &trans    &trans          &trans  &trans    &trans
+&trans  &trans     &trans  &trans  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)      &mkp MB5  &mkp MB4                                    &trans
+            >;
+        };
+
+        ARROW {
+            bindings = <
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+        };
+
+        bt {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans  &to 7       &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        SC {
+            bindings = <
+&trans         &kp LG(Q)  &kp LG(W)  &kp LG(LS(R))  &kp LS(LG(C))                         &trans  &trans  &trans  &trans  &trans
+&kp LC(SPACE)  &kp LG(A)  &trans     &trans         &kp LG(F)      &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans     &trans     &trans         &kp LG(LS(T))  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans     &trans     &trans         &kp LG(C)      &kp LG(V)      &trans  &trans                          &to 7
+            >;
+        };
+
+        dovrak {
+            bindings = <
+&kp SQT         &kp COMMA      &kp PERIOD    &kp P      &kp Y                                     &kp F      &kp G  &kp C    &kp R  &lt 5 L
+&kp TAB         &kp A          &kp O         &kp E      &kp U        &kp I         &kp D          &kp H      &kp T  &lt 3 N  &kp S  &kp MINUS
+&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q         &kp J      &kp K        &kp X         &kp B          &kp M      &kp W  &kp V    &kp Z  &kp LS(CLCK)
+&kp LCTRL       &kp LEFT_GUI   &kp LEFT_ALT  &kp SPACE  &lt 1 SPACE  &mkp MB1      &kp BACKSPACE  &kp ENTER                         &lt 2 ESCAPE
+            >;
+
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+        };
+    };
+};
