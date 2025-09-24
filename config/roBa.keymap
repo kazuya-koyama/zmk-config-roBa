@@ -61,7 +61,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 7 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
     };
@@ -80,23 +80,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        qwerty {
+        dovrak {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp SQT         &kp COMMA      &kp PERIOD    &kp P      &kp Y                                     &kp F      &kp G  &kp C    &kp R  &lt 5 L
+&kp TAB         &kp A          &kp O         &kp E      &kp U        &kp I         &kp D          &kp H      &kp T  &lt 3 N  &kp S  &kp MINUS
+&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q         &kp J      &kp K        &kp X         &kp B          &kp M      &kp W  &kp V    &kp Z  &kp LS(CLCK)
+&kp LCTRL       &kp LEFT_GUI   &kp LEFT_ALT  &kp SPACE  &lt 1 SPACE  &mkp MB1      &kp BACKSPACE  &kp ENTER                         &lt 2 ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         NUM {
             bindings = <
-&kp COLON       &kp EXCLAMATION  &kp AT_SIGN     &kp HASH         &kp DOLLAR                                              &kp N7        &kp N8        &kp N9        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SEMICOLON   &kp HOME         &kp UP_ARROW    &kp END          &kp GRAVE             &kp PLUS       &kp SQT            &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp NON_US_BACKSLASH  &kp EQUAL      &kp DOUBLE_QUOTES  &kp N1        &kp NUMBER_2  &kp N3        &kp LEFT_BRACE        &kp RIGHT_BRACE
-&kp LCTRL       &trans           &trans          &trans           &trans                &to 6          &kp PERIOD         &kp SLASH                                                       &kp N0
+&kp COLON       &kp EXCLAMATION  &kp AT_SIGN    &kp HASH        &kp DOLLAR                                         &kp N7        &kp N8        &kp N9        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp SEMICOLON   &kp HOME         &kp BACKSLASH  &kp END         &kp GRAVE        &kp PLUS       &kp SQT            &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &kp LEFT_ARROW   &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp EQUAL      &kp DOUBLE_QUOTES  &kp N1        &kp NUMBER_2  &kp N3        &kp LEFT_BRACE        &kp RIGHT_BRACE
+&kp LCTRL       &trans           &trans         &trans          &trans           &to 6          &kp PERIOD         &kp SLASH                                                       &kp N0
             >;
         };
 
@@ -132,7 +132,7 @@
         bt {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &to 7       &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &trans        &trans        &trans        &trans  &to 0       &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
@@ -140,22 +140,22 @@
 
         SC {
             bindings = <
-&trans         &kp LG(Q)  &kp LG(W)  &kp LG(LS(R))  &kp LS(LG(C))                         &trans  &trans  &trans  &trans  &trans
-&kp LC(SPACE)  &kp LG(A)  &trans     &trans         &kp LG(F)      &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(SPACE)  &kp LG(Q)  &kp LG(W)  &kp LG(LS(R))  &kp LS(LG(C))                         &trans  &trans  &trans  &trans  &trans
+&kp LG(Z)      &kp LG(A)  &trans     &trans         &kp LG(F)      &trans         &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &trans     &trans     &trans         &kp LG(LS(T))  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans     &trans     &trans         &kp LG(C)      &kp LG(V)      &trans  &trans                          &to 0
+&trans         &trans     &trans     &kp LG(X)      &kp LG(C)      &kp LG(V)      &trans  &trans                          &to 0
             >;
         };
 
-        dovrak {
+        qwerty {
             bindings = <
-&kp SQT         &kp COMMA      &kp PERIOD    &kp P      &kp Y                                     &kp F      &kp G  &kp C    &kp R  &lt 5 L
-&kp TAB         &kp A          &kp O         &kp E      &kp U        &kp I         &kp D          &kp H      &kp T  &lt 3 N  &kp S  &kp MINUS
-&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q         &kp J      &kp K        &kp X         &kp B          &kp M      &kp W  &kp V    &kp Z  &kp LS(CLCK)
-&kp LCTRL       &kp LEFT_GUI   &kp LEFT_ALT  &kp SPACE  &lt 1 SPACE  &mkp MB1      &kp BACKSPACE  &kp ENTER                         &lt 2 ESCAPE
+&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
     };
 };
