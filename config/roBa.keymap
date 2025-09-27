@@ -149,10 +149,10 @@
 
         layer_8 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                  &trans               &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans              &trans               &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans              &trans               &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)                          &trans
+&trans  &trans  &trans  &trans  &trans                                  &trans               &msc SCRL_UP    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans              &mkp MB1             &msc SCRL_DOWN  &trans  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB5            &mkp MB4             &trans          &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)                                    &trans
             >;
         };
 
