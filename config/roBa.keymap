@@ -141,9 +141,18 @@
         SC {
             bindings = <
 &kp LC(SPACE)  &kp LG(Q)  &kp LG(W)  &kp LG(LS(R))  &kp LS(LG(C))                            &kp LS(LG(C))  &kp LS(LG(R))   &kp LG(W)          &trans         &kp LC(SPACE)
-&kp LG(Z)      &kp LG(A)  &trans     &trans         &kp LG(F)      &trans         &kp LG(F)  &mkp MB1       &kp LEFT_ARROW  &lt 3 RIGHT_ARROW  &kp LG(A)      &kp LG(Z)
+&kp LG(Z)      &kp LG(A)  &trans     &trans         &kp LG(F)      &trans         &kp LG(F)  &mkp MB1       &kp LEFT_ARROW  &lt 7 RIGHT_ARROW  &kp LG(A)      &kp LG(Z)
 &trans         &trans     &trans     &trans         &kp LG(LS(T))  &trans         &kp LG(X)  &kp LG(C)      &kp LG(V)       &trans             &kp LA(SPACE)  &trans
 &trans         &trans     &trans     &kp LG(X)      &kp LG(C)      &kp LG(V)      &kp LG(V)  &kp LG(C)                                                        &to 0
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                  &trans               &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans              &trans               &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans              &trans               &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)                          &trans
             >;
         };
 
